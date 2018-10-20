@@ -28,12 +28,11 @@ The following will create a new **AdvancedMode**. The name is required.
 
 ##### Extra Options:
 
-Sets Name to "MyNewMode", **Priority** to 69 and the **AdvancedMode** type.
-
 - **Priority = Any integer**
 - **AdvancedMode** = [Game, System, Ball, Manual]
 
----
+
+Following command Sets Name to "MyNewMode", **Priority** to 69 and the **AdvancedMode** type.
 
 	
 	dotnet new -skelegame -m MyNewMode -p 69 -t Ball
