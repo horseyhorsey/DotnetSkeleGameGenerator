@@ -1,0 +1,51 @@
+{
+    "$schema": "http://json.schemastore.org/template",
+    "author": "Dave Horsefield",
+    "classifications": [ "Game", "SkeletonGame" ],
+    "identity": "Horsesoft.SkeletonGame.Templates",        
+    "name": "SkeletonGame Generator",
+    "shortName": "skelegame",
+    "tags": {
+        "language": "Python"
+        },    
+    "symbols": {
+        "modeName": {
+            "isRequired" : true,
+            "type": "parameter",
+            "datatype":"text",
+            "defaultValue": "EmptyMode",
+            "replaces": "EmptyMode", 
+            "fileRename": "EmptyMode",
+        },
+        "modePriority": {
+            "type": "parameter",
+            "datatype":"text",
+            "defaultValue": "=2",
+            "replaces": "2", 
+        },
+        "modeType": {
+            "type": "parameter",
+            "datatype":"choice",
+            "defaultValue": "Game",
+            "replaces": "Game",
+            "choices": [
+                {
+                    "choice": "Game",
+                    "description": "2 - Added on game start, removed on game end"
+                },
+                {
+                    "choice": "System",
+                    "description": "0 - Added on reset, removed/readded on reset, removed never"
+                },
+                {
+                    "choice": "Ball",
+                    "description": "1 - Added on ball start, removed on ball end"
+                },
+                {
+                    "choice": "Manual",
+                    "description": "3 - Programmer must add/remove mode"
+                },                
+            ]
+        }        
+    }
+}
